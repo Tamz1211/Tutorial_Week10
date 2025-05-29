@@ -1,0 +1,192 @@
+/* === RESET === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fefefe;
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding-bottom: 100px;
+}
+
+/* === NAVBAR === */
+.navbar {
+  background-color: #002D72;
+  padding: 18px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.navbar a {
+  color: #FFD100;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+  color: white;
+  transform: scale(1.1);
+}
+
+/* === SLIDER === */
+.slider {
+  max-width: 1100px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.slides {
+  display: flex;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0%); }
+  33% { transform: translateX(-100%); }
+  66% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
+}
+
+/* === MAIN CONTENT === */
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main h1 {
+  font-size: 40px;
+  color: #002D72;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px #FFD100;
+}
+
+main p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.button {
+  background: #FFD100;
+  color: #002D72;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: #002D72;
+  color: #FFD100;
+}
+
+/* === FACULTY LIST === */
+.faculty-list {
+  background: white;
+  margin: 30px auto;
+  max-width: 700px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  text-align: left;
+  font-size: 18px;
+  color: #002D72;
+}
+
+/* === VIDEO SECTION === */
+.video-section {
+  margin-top: 40px;
+}
+
+.video-section iframe {
+  border: 5px solid #FFD100;
+  border-radius: 12px;
+  max-width: 100%;
+}
+
+/* === FOOTER === */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #002D72;
+  color: #FFD100;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.95em;
+  box-shadow: 0 -6px 12px rgba(0,0,0,0.2);
+}
+
+footer a {
+  color: #FFD100;
+  text-decoration: none;
+  margin: 0 8px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* === MAP === */
+iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 400px;
+  margin-top: 20px;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .slides img {
+    height: 300px;
+  }
+
+  main h1 {
+    font-size: 28px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+
+  .faculty-list {
+    padding: 20px;
+    font-size: 16px;
+  }
+}
